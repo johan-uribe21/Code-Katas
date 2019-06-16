@@ -23,63 +23,53 @@ function plus(b){
 };
 
 function zero(operator=null){
-  const a = 0;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 0} 
+  return operator(0)
 }
 
 function one(operator=null){
-  const a = 1;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 1} 
+  return operator(1)
 }
 
 function two(operator=null){
-  const a = 2;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 2} 
+  return operator(2)
 }
 
 function three(operator=null){
-  const a = 3;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 3} 
+  return operator(3)
 }
 
 function four(operator=null){
-  const a = 4;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 4} 
+  return operator(4)
 }
 
 function five(operator=null){
-  const a = 5;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 5} 
+  return operator(5)
 }
 
 function six(operator=null){
-  const a = 6;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 6} 
+  return operator(6)
 };
 
 function seven(operator=null){
-  const a = 7;
-  if(operator===null){return a} 
-  return operator(a)
+  if(operator===null){return 7} 
+  return operator(7)
 };
 
 function eight(operator=null){
-  const a = 8;
-  if(operator===null){return a} ;
-  return operator(a)
+  if(operator===null){return 8} ;
+  return operator(8)
 };
 
 function nine(operator=null){
-  const a = 9;
-  if(operator===null){return a};
-  return operator(a)
+  if(operator===null){return 9};
+  return operator(9)
 };
 
 const x = plus(five())
