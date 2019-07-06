@@ -42,18 +42,29 @@ function TreeNode(val) {
 }
 
 var mergeTrees = function(t1, t2) {
-  const t3 = new TreeNode();
-  t3.val = t1.val + t2.val;
-  // base case: left and right nodes are undefined
-  if(!t1.left && !t1.right && !t2.left && !t2.right ) return t1.val + t2.val;
+  if(!t1 && !t2) return null
 
+  let t1Value = !t1 ? 0: t1.val;  
+  let t2Value = !t2 ? 0: t2.val;  
+
+  const t3 = new TreeNode( t1Value + t2Value ) ;
   // recursive case
-  let leftBranch = mergeTrees(t1.left, t2.left);
-  let rightBranch = mergeTrees(t1.right, t2.right);
-
-  return t3.val;
+  // if t1 is null, pass t1, otherwise pass t1.left
+  // same for t2. 
+  t3.left = mergeTrees(t1 && t1.left, t2 && t2.left);
+  t3.right = mergeTrees(t1 && t1.right, t2 && t2.right);
+  
+  return t3
 };
 
 //  1            1
 // 2 3          2 3
  //t1.val == 2
+ // not in base case
+ // left branch = mergeTrees(2,2)) 
+    //in base case: return 2 + 2
+ // right branch = mergeTrees(3,3) 
+    // in base case: returns 3 + 3
+ // t3.left = 4
+ // t3.right = 6
+ // return t3 {t3.val = }
