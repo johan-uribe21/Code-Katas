@@ -49,22 +49,10 @@ var mergeTrees = function(t1, t2) {
 
   const t3 = new TreeNode( t1Value + t2Value ) ;
   // recursive case
-  // if t1 is null, pass t1, otherwise pass t1.left
-  // same for t2. 
+  // if t1 is null, pass t1, otherwise pass t1.left. Same for t2. 
   t3.left = mergeTrees(t1 && t1.left, t2 && t2.left);
   t3.right = mergeTrees(t1 && t1.right, t2 && t2.right);
   
   return t3
 };
 
-//  1            1
-// 2 3          2 3
- //t1.val == 2
- // not in base case
- // left branch = mergeTrees(2,2)) 
-    //in base case: return 2 + 2
- // right branch = mergeTrees(3,3) 
-    // in base case: returns 3 + 3
- // t3.left = 4
- // t3.right = 6
- // return t3 {t3.val = }
